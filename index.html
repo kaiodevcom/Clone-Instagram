@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles.css">
+    <title>Instagram</title>
+</head>
+
+<body>
+
+    <div class="container-imagens">
+        <img src="./imgs/img-celular.png" class="img-celular">
+        <img src="./imgs/img-insta-1.png" class="imagem-celular">
+        <img src="./imgs/img-insta-2.png" class="imagem-celular" id="troca-imagem">
+    </div>
+
+    <div class="container-itens">
+        <div class="container-form">
+            <img src="./imgs/logo-insta.png" class="insta-logo">
+
+            <input type="email" placeholder="Telefone, nome de usuário ou email">
+            <input type="password" placeholder="Senha">
+
+            <button>Entrar</button>
+
+            <a class="login-facebook">Entrar com o Facebook</a>
+            <a class="esqueceu-senha">Esqueceu a senha?</a>
+        </div>
+
+        <div class="container-cadastro">
+            <p class="paragrafo-conta">Não tem uma conta?</p><a class="link-cadastro">Cadastrar-se</a>
+        </div>
+
+        <p class="paragrafo-app">Obtenha o aplicativo</p>
+
+        <div class="container-app">
+            <a href="https://apps.apple.com/br/app/instagram/id389801252" target="_blankss"><img
+                    src="./imgs/logo-app-store.png" alt="logo do ios" class="logo-app"></a>
+            <a href="https://play.google.com/store/apps/details?id=com.instagram.android&hl=pt_BR&gl=US"
+                target="_blank"><img src="./imgs/logo-play-store.png" alt="logo do google" class="logo-app"></a>
+        </div>
+    </div>
+</body>
+
+<script>
+    let imagem = document.getElementById("troca-imagem")
+
+    function trocaImagem() {
+
+        if (imagem.style.opacity == 0) {
+            imagem.style.opacity = 1
+        }
+        else {
+            imagem.style.opacity = 0
+        }
+    }
+
+    setInterval(function () {
+        trocaImagem()
+    }, 4000);
+
+</script>
+
+</html>
